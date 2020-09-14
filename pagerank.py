@@ -103,8 +103,10 @@ class WebGraph():
             v = torch.ones(n)
 
         else:
-            v = torch.zeros(n)
-            # FIXME: your code goes here
+            v = torch.zeros(n)   
+            for i in range(n):
+                if url_satisfies_query(url=self._index_to_url(i), query = query):
+                    v[i] = 1
         
         v_sum = torch.sum(v)
         assert(v_sum>0)
@@ -136,9 +138,27 @@ class WebGraph():
 
             # main loop
             # FIXME: your code goes here
-            x = x0.squeeze()
+            a = torch.zeros(n)
+           
+            p_row_sums = torch.sparse.sum(self.P,1)
 
-            return x
+            for i in range(n):
+                if p_row_sums[i] == 0:
+                    a[i] = 1
+                else:
+                    a[i] = 0
+
+            x = x0
+
+            for k in range (0, max_iterations):
+                x1 = x
+                left = alpha * torch.sparse.mm(self.P.t(),x1).t()
+                right = (a * alpha * x1.t() + (1-alpha))*v.t()
+                x = (left + right).t()
+                if torch.norm(x - x1) < epsilon:
+                    break
+
+            return x.squeeze()
 
 
     def search(self, pi, query='', max_results=10):
