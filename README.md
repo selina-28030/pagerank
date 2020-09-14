@@ -1,4 +1,4 @@
-# csci145_01b
+# Exploring Pagerank
 
 Implementing a simple search engine for lawfareblog.com, a website providing legal analysis on US national security issues.
 
