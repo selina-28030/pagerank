@@ -4,7 +4,7 @@ Implementing a simple search engine for lawfareblog.com, a website providing leg
 
 # Search Results Including Most Similar Words Using Gensim (11/26/20)
 
-## Running search queries on Lawfare:
+Running search queries on Lawfare:
 
 ```
 python3 pagerank.py --data=./lawfareblog.csv.gz --search_query='corona'
@@ -76,7 +76,7 @@ INFO:root:rank=8 pagerank=0.14366623759269714 url=www.lawfareblog.com/cyberlaw-p
 INFO:root:rank=9 pagerank=0.14239734411239624 url=www.lawfareblog.com/lawfare-podcast-bonus-edition-gordon-sondland-vs-committee-no-bull
 ```
 
-## Exploring alpha and filter ratio combinations
+Exploring alpha and filter ratio combinations
 ```
 $ python3 pagerank.py --data=./lawfareblog.csv.gz --verbose
 INFO:root:rank=0 pagerank=0.2874051630496979 url=www.lawfareblog.com/about-lawfare-brief-history-term-and-site
