@@ -184,7 +184,7 @@ _________________________________________
 
 # Original Results
 
-# The Power Method
+## The Power Method
 
 1) Ran the power method on an example graph from *Deeper Inside Pagerank* paper.
 
@@ -333,7 +333,7 @@ INFO:root:rank=7 pagerank=1.0863e+00 url=www.lawfareblog.com/water-wars-disjoint
 INFO:root:rank=8 pagerank=1.0863e+00 url=www.lawfareblog.com/water-wars-us-china-divide-shangri-la
 INFO:root:rank=9 pagerank=1.0863e+00 url=www.lawfareblog.com/water-wars-sinking-feeling-philippine-china-relations
 ```
-# Personalization Vector
+## Personalization Vector
 
 1) Implementing the `WebGraph.make_personalization_vector` function
 ```
