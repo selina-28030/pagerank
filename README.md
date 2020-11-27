@@ -4,7 +4,7 @@ Implementing a simple search engine for lawfareblog.com, a website providing leg
 
 # Search Results Including Most Similar Words Using Gensim (11/26/20)
 
-Running search queries on lawfare:
+Running search queries on Lawfare:
 
 ```
 python3 pagerank.py --data=./lawfareblog.csv.gz --search_query='corona'
